@@ -17,3 +17,7 @@ Babelba
 * In `Include` finden sich die Headerfiles
 * In `Temp` sind die binären Object-Dateien, die beim Compilieren entstehen.
 * Im Hauptverzeichnis sind die Ordner, die Binary, Makefile und Readme
+
+##Voraussetzungen
+* C++ 2011 (z.B. [GCC](https://gcc.gnu.org/install/specific.html "GNU Compiler Collection"), [MSVS2012](http://www.microsoft.com/de-de/download/details.aspx?id=34673 "Microsoft Visual Studio 2012"), ...)
+* [SFML 2.1](http://www.sfml-dev.org "Simple and Fast Multimedia Library")
