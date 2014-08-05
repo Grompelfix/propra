@@ -20,7 +20,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	playButton->setText("GameState");
 	playButton->setCallback([this] ()
 	{
-		requestStackPop();
+		//requestStackPop();
 		requestStackPush(States::Game);
 	});
 	// logo
@@ -29,7 +29,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	logoButton->setText("LogoState");
 	logoButton->setCallback([this] ()
 	{
-		requestStackPop();
+		//requestStackPop();
 		requestStackPush(States::Logo);
 	});
 	// intro
@@ -38,8 +38,8 @@ MenuState::MenuState(StateStack& stack, Context context)
 	introButton->setText("IntroState");
 	introButton->setCallback([this] ()
 	{
-		requestStackPop();
-		requestStackPush(States::Logo);
+		//requestStackPop();
+		requestStackPush(States::Intro);
 	});
 	// Pause
 	auto pauseButton = std::make_shared<GUI::Button>(context);
@@ -55,7 +55,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	outroButton->setText("OutroState");
 	outroButton->setCallback([this] ()
 	{
-		requestStackPop();
+		//requestStackPop();
 		requestStackPush(States::Outro);
 	});
 	// GameOvewr
@@ -72,7 +72,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	exitButton->setText("Exit");
 	exitButton->setCallback([this] ()
 	{
-		requestStackPop();
+		requestStackPop(); // TODO ITE: Replace with Clear()
 	});
 
 	mGUIContainer.pack(playButton);
@@ -104,6 +104,10 @@ bool MenuState::update(sf::Time)
 
 bool MenuState::handleEvent(const sf::Event& event)
 {
+	if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Escape)
+	{
+		requestStackPop();
+	}
 	mGUIContainer.handleEvent(event);
 	return false;
 }

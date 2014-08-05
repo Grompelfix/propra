@@ -18,11 +18,16 @@ class LogoState : public State
 
 
 	private:
+		void 				requestExit();
 		sf::Sprite			mBackgroundSprite;
 		sf::Text			mText;
 
 		bool				mShowText;
-		sf::Time			mTextEffectTime;
+		sf::Time			mAge;
+		int					mCount; // how many images/texts are there
+		int					mCurrent; // current image/text id
+		sf::Time 			*mpTimeSteps; // time after text/image changes
+		sf::String			*mpStrings; // texts to be shown
 };
 
 #endif // BOOK_LOGOSTATE_HPP

@@ -30,7 +30,8 @@ Application::Application()
 
 	mFonts.load(Fonts::Main, 	"Media/Sansation.ttf");
 
-	mTextures.load(Textures::TitleScreen,	"Media/Textures/Screens.png");
+	//mTextures.load(Textures::TitleScreen,	"Media/Textures/Buttons.png");
+	mTextures.load(Textures::Screens,		"Media/Textures/Screens.png");
 	mTextures.load(Textures::Buttons,		"Media/Textures/Buttons.png");
 
 	mStatisticsText.setFont(mFonts.get(Fonts::Main));
@@ -38,7 +39,7 @@ Application::Application()
 	mStatisticsText.setCharacterSize(10u);
 
 	registerStates();
-	mStateStack.pushState(States::Logo);
+	mStateStack.pushState(States::Menu);
 
 	mMusic.setVolume(25.f);
 }

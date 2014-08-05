@@ -19,9 +19,10 @@ namespace Textures
 		Jungle,
 		Explosion,
 		FinishLine,
-		// needed
-		Buttons,
 		TitleScreen,
+		// needed
+		Screens,
+		Buttons,
 		Particle,
 	};
 }

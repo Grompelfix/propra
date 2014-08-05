@@ -47,8 +47,8 @@ bool OutroState::handleEvent(const sf::Event& event)
 	if (event.type == sf::Event::KeyReleased)
 	{
 		requestStackPop();
-		requestStackPush(States::Menu);
+		// requestStackPush(States::Menu); // TODO ITE enable
 	}
 
-	return true;
+	return false; // dont forward events
 }

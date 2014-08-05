@@ -28,7 +28,7 @@ template <typename Resource, typename Identifier>
 Resource& ResourceHolder<Resource, Identifier>::get(Identifier id)
 {
 	auto found = mResourceMap.find(id);
-	printf("Get:%i \n",id);
+	//printf("Get:%i \n",id);
 	assert(found != mResourceMap.end());
 
 	return *found->second;
