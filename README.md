@@ -1,8 +1,9 @@
-ProPra Bobo *(propra)*
-===========
+#ProPra Bobo
 
-**!!! Noch nicht Lauffähig !!!**
+##Kurzbeschreibung des Spiels
+Babelba
 
+##Verzeichnisnutzung
 * In `Stuff` sammelt sich so einiges an:
  * Diverse Dokumente über das Spiel
  * `WIP` (Work in Progress) von Assets etc
