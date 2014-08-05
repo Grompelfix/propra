@@ -14,6 +14,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 {
 	sf::Texture& texture = context.textures->get(Textures::TitleScreen);
 	mBackgroundSprite.setTexture(texture);
+	mBackgroundSprite.setTextureRect(sf::IntRect(2*1024,3*768, 1024,768));
 	// game
 	auto playButton = std::make_shared<GUI::Button>(context);
 	playButton->setPosition(100, 300);
