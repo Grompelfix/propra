@@ -1,0 +1,9 @@
+# ignore Temp-directorys
+Temp/
+
+# ignore files ending with
+*o
+*exe
+
+# ignore files:
+prog
